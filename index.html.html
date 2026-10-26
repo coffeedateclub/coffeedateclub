@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coffee Date Club – Malta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,900,100;1,9..144,900,100&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF9F4;--ink:#7A5646;--tan:#CFB19E;--soft:#F4E7DC;--text:#4A3329;--btn-text:#FFF9F4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A1D17;--ink:#E3C3AE;--tan:#B58F78;--soft:#3A2A22;--text:#F1E4DA;--btn-text:#2A1D17}}
+:root[data-theme="dark"]{--bg:#2A1D17;--ink:#E3C3AE;--tan:#B58F78;--soft:#3A2A22;--text:#F1E4DA;--btn-text:#2A1D17}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.7 'DM Sans',system-ui,sans-serif}
+h1,h2,h3,.wm{font-family:'Fraunces',Georgia,serif;font-weight:900;font-variation-settings:'SOFT' 100;color:var(--ink);line-height:.95;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 1.5rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0}
+nav b{font-family:'Fraunces',serif;font-weight:900;color:var(--ink);font-size:1.1rem}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;margin-left:1.2rem;font-size:.95rem}
+.hero{text-align:center;padding:3rem 0 4rem}
+.wm{position:relative;display:inline-block;text-align:left;font-size:clamp(3.6rem,15vw,8rem);letter-spacing:-.02em;filter:drop-shadow(2px 3px 0 var(--soft))}
+.wm span{display:block}
+.wm .d{font-style:italic;margin-left:-.12em;font-size:.88em}
+.wm .c{margin-left:.55em;margin-top:-.08em}
+.wm svg{position:absolute;fill:var(--tan)}
+.s1{right:-.05em;top:.95em;width:.62em}.s2{right:-.45em;top:.4em;width:.3em}
+.hero p{max-width:34rem;margin:2rem auto 1.6rem;font-size:1.2rem}
+.btn{display:inline-block;background:var(--ink);color:var(--btn-text);padding:.9rem 1.8rem;border-radius:999px;text-decoration:none;font-weight:700}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+section{padding:3.5rem 0}
+h2{font-size:clamp(2.2rem,6vw,3.4rem);margin-bottom:1.2rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.about p{margin:0 0 1rem}
+.band{background:var(--soft)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem}
+.steps{text-align:center}
+.steps h3{font-size:1.5rem;margin-bottom:.5rem;line-height:1.05}
+.ic{width:104px;height:104px;border-radius:50%;background:var(--bg);display:grid;place-items:center;margin:0 auto 1.1rem}
+.ic svg,.soon svg{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.ic svg{width:60px;height:60px}
+.soon svg{width:84px;height:84px}
+.steps p{margin:0}
+.soon ul{list-style:none;padding:0;margin:2rem 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.soon li{background:var(--soft);border-radius:28px;padding:2rem 1rem 1.6rem;text-align:center}
+.soon h3{font-size:1.4rem;font-style:italic;margin-top:1rem;line-height:1.05}
+.soon li p{margin:0}
+.founder{text-align:center}
+.founder p{max-width:40rem;margin:0 auto 1rem}
+.join{text-align:center}
+.join p{max-width:32rem;margin:0 auto 1.6rem}
+.join .row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.mail{margin-top:1.4rem;font-size:.95rem}
+.mail a,footer a{color:var(--ink);font-weight:500}
+.btn.ig{display:inline-flex;align-items:center;gap:.6rem}
+.btn.ig svg{width:1.3rem;height:1.3rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.btn.ig circle:last-child{fill:currentColor}
+.signup{max-width:26rem;margin:2.5rem auto 0;background:var(--soft);border-radius:28px;padding:2rem 1.6rem;text-align:left;display:grid;gap:1rem}
+.signup h3{font-size:1.6rem;text-align:center}
+.signup label{display:grid;gap:.3rem;font-weight:500;font-size:.95rem;color:var(--ink)}
+.signup input,.signup select{font:inherit;padding:.75rem 1rem;border-radius:14px;border:2px solid var(--tan);background:var(--bg);color:var(--text)}
+.signup input:focus-visible,.signup select:focus-visible{outline:3px solid var(--tan);outline-offset:2px}
+.signup .btn{border:0;cursor:pointer;font:inherit;font-weight:700;justify-self:center}
+.signup .note{margin:0;text-align:center;font-size:.9rem;max-width:none}
+.pop{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:1.5rem;background:rgba(42,29,23,.55)}
+.pop.on{display:flex}
+.pop-card{position:relative;max-width:24rem;width:100%;background:var(--bg);border-radius:32px;padding:2.4rem 1.8rem 1.8rem;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.pop-card h3{font-size:2rem;margin-bottom:.8rem}
+.pop-card p{margin:0 0 1.4rem}
+.pop-ic{width:76px;height:76px;border-radius:50%;background:var(--soft);display:grid;place-items:center;margin:0 auto 1.1rem}
+.pop-ic svg{width:40px;height:40px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+.pop-ic circle:last-child{fill:var(--ink)}
+.pop-x{position:absolute;top:.8rem;right:.8rem;width:2.4rem;height:2.4rem;border:0;border-radius:50%;background:var(--soft);color:var(--ink);font-size:1.3rem;line-height:1;cursor:pointer}
+.pop-later{display:block;margin:1rem auto 0;background:none;border:0;color:var(--ink);font:inherit;font-weight:500;cursor:pointer;text-decoration:underline}
+.pop-x:focus-visible,.pop-later:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+@media(prefers-reduced-motion:no-preference){.pop.on .pop-card{animation:pop .35s ease-out}@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}}
+footer{text-align:center;padding:2rem 0 3rem;color:var(--ink);font-size:.9rem}
+@media(max-width:700px){.about,.steps,.soon ul{grid-template-columns:1fr}.wm{margin-right:.4em}nav a{margin-left:.8rem}.soon ul{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><b>Coffee Date Club</b><div><a href="#about">About</a><a href="#how">How it works</a><a href="#soon">Coming soon</a><a href="#join">Join</a></div></nav>
+<header class="hero">
+<div class="wm" role="img" aria-label="Coffee date club">
+<span>Coffee</span><span class="d">date</span><span class="c">club</span>
+<svg class="s1" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
+<svg class="s2" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
+</div>
+<p>A community hosting coffee meet-ups in Malta for language students and anyone who wants to practice English, meet new people and enjoy a good cup of coffee!</p>
+<a class="btn" href="#join">Join the next coffee date</a>
+</header>
+</div>
+
+<section id="about"><div class="wrap about">
+<h2>Why a coffee date club?</h2>
+<div>
+<p>Learning English in Malta is easier when you actually get to practice using it. While classrooms teach the grammar, conversations are where what is learnt in class really gets the chance to be put into practice, and what better way than over a cup of coffee?</p>
+<p>Coffee Date Club is a community where anyone who wants to practice their English and make new friends is welcome, regardless of how good your English might be at the moment. We pick a local cafe, you show up, and we talk.</p>
+</div></div></section>
+
+<section id="how" class="band"><div class="wrap">
+<h2>What a meet-up looks like</h2>
+<div class="steps">
+<div><div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 26h30v12a14 14 0 0 1-14 14h-2a14 14 0 0 1-14-14z"/><path d="M42 30h4a6 6 0 0 1 0 12h-5M22 8c-3 4 3 6 0 10M32 8c-3 4 3 6 0 10"/></svg></div><h3>We pick a cafe</h3><p>Each gathering is held at a different coffee shop in Malta that will be announced in advance.</p></div>
+<div><div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="22" cy="26" r="8"/><path d="M18 28q4 4 8 0M6 56c0-10 7-17 16-17s16 7 16 17"/><circle cx="19" cy="25" r=".6"/><circle cx="25" cy="25" r=".6"/><circle cx="44" cy="31" r="7"/><path d="M40.5 33q3.5 3.5 7 0M32 58c0-8 5-14 12-14s12 6 12 14"/><circle cx="41.5" cy="30" r=".6"/><circle cx="46.5" cy="30" r=".6"/><path d="M33 15c-5-3-7-7-4-9 2-1.500 3.500 0 4 1 .5-1 2-2.500 4-1 3 2 1 6-4 9z"/></svg></div><h3>You show up</h3><p>Any level of English is welcome! Whether you are an A1 beginner or an advanced speaker. You can come alone or bring a friend, whatever is most comfortable.</p></div>
+<div><div class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 12h28a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H22l-8 7v-7H8a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4z"/><path d="M26 28c-6-4-8-8-5-11 2-2 4-1 5 1 1-2 3-3 5-1 3 3 1 7-5 11z"/><path d="M44 26h12a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4h-2v7l-8-7H34a4 4 0 0 1-4-4v-3"/></svg></div><h3>Make new friends</h3><p>Activities and conversation starters to help you practice English and leave with new friends.</p></div>
+</div></div></section>
+
+<section id="soon" class="soon"><div class="wrap">
+<h2>Coming soon</h2>
+<p>Coffee is just the start. As the club grows, you can look forward to more kinds of ways to get together.</p>
+<ul>
+<li><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30h44l-4 26H14z"/><path d="M20 30a12 12 0 0 1 24 0M12 40h40M13 48h38"/></svg><h3>Picnics</h3></li>
+<li><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 10h20c0 14-4 22-10 22s-10-8-10-22zM28 32v20M18 56h20M20 20h16"/><circle cx="52" cy="14" r="6"/></svg><h3>Wine at sunset</h3></li>
+<li><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8C17 8 6 18 6 30c0 11 9 18 18 18 5 0 5-5 2-8-3-4 0-8 5-8h10c8 0 15-3 15-10C56 14 46 8 32 8z"/><circle cx="20" cy="28" r="3"/><circle cx="30" cy="19" r="3"/><circle cx="43" cy="21" r="3"/></svg><h3>Painting events</h3></li>
+<li><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="22" y="6" width="20" height="30" rx="10"/><path d="M22 18h20M22 26h20M14 30a18 18 0 0 0 36 0M32 48v8M22 58h20"/></svg><h3>Karaoke nights</h3></li>
+</ul></div></section>
+
+<section class="band founder"><div class="wrap">
+<h2>Hi, I’m Nicole!</h2>
+<p>I’m an English teacher in Malta, and I’ve made friends with language students and foreigners from all over the world who are learning English. I love making new friends, learning about different cultures, and most of all, having the chance to practise speaking English and make special memories while doing it.</p>
+<p>That’s why I started my own English-speaking club: a community where people can make new friends and gain confidence, not only in their English but also in themselves, while making fun memories and supporting local businesses.</p>
+</div></section>
+
+<section id="join" class="join"><div class="wrap">
+<h2>Come for a coffee</h2>
+<p>Follow us on Instagram and join the mailing list to hear about the next gathering. It’s free to join. You only pay for your own drink.</p>
+<div class="row">
+<a class="btn ig" href="https://www.instagram.com/coffeedateclubmt" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6"/></svg>Follow @coffeedateclubmt</a>
+</div>
+<form id="signup" class="signup">
+<h3>Join the mailing list</h3>
+<label>Name<input name="name" type="text" autocomplete="given-name" required></label>
+<label>Email<input name="email" type="email" autocomplete="email" required></label>
+<label>English level (optional)<select name="level"><option value="">Not sure</option><option>A1: Beginner</option><option>A2: Pre-intermediate</option><option>B1: Intermediate</option><option>B2: Upper intermediate</option><option>C1: Advanced</option></select></label>
+<button class="btn" type="submit">Sign me up</button>
+<p id="msg" class="note" role="status"></p>
+</form>
+</div></section>
+
+<footer>Coffee Date Club · Malta · <a href="https://www.instagram.com/coffeedateclubmt" target="_blank" rel="noopener">Instagram</a> · <a href="mailto:coffeedateclub@gmail.com">Email</a></footer>
+<script>
+document.getElementById('signup').addEventListener('submit',function(e){
+ e.preventDefault();
+ var f=e.target,n=f.name.value.trim(),m=f.email.value.trim(),l=f.level.value;
+ var body='Please add me to the Coffee Date Club mailing list.\n\nName: '+n+'\nEmail: '+m+(l?'\nEnglish level: '+l:'')+'\n';
+ var url='mailto:coffeedateclub@gmail.com?subject='+encodeURIComponent('Mailing list sign-up')+'&body='+encodeURIComponent(body);
+ document.getElementById('msg').textContent='Your email app should open with your details ready. Press send to finish signing up.';
+ window.location.href=url;
+});
+</script>
+<div id="pop" class="pop" role="dialog" aria-modal="true" aria-labelledby="pop-t">
+<div class="pop-card">
+<button class="pop-x" type="button" aria-label="Close">×</button>
+<div class="pop-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6"/></svg></div>
+<h3 id="pop-t">Follow us on Instagram!</h3>
+<p>Find out where the next coffee date is and see photos from our meet-ups.</p>
+<a class="btn" href="https://www.instagram.com/coffeedateclubmt" target="_blank" rel="noopener">Follow @coffeedateclubmt</a>
+<button class="pop-later" type="button">Maybe later</button>
+</div>
+</div>
+<script>
+(function(){
+ var p=document.getElementById('pop'),shown=false;
+ try{shown=sessionStorage.getItem('cdc-pop')==='1'}catch(e){}
+ function close(){p.classList.remove('on');try{sessionStorage.setItem('cdc-pop','1')}catch(e){}}
+ p.querySelector('.pop-x').addEventListener('click',close);
+ p.querySelector('.pop-later').addEventListener('click',close);
+ p.querySelector('.btn').addEventListener('click',close);
+ p.addEventListener('click',function(e){if(e.target===p)close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&p.classList.contains('on'))close()});
+ function open(){if(!p.classList.contains('on')){p.classList.add('on');p.querySelector('.pop-x').focus()}}
+ var how=document.getElementById('how');
+ if(!shown&&how){
+  if('IntersectionObserver' in window){
+   var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){io.disconnect();open()}},{threshold:.3});
+   io.observe(how);
+  }else{setTimeout(open,7000)}
+ }
+})();
+</script>
+</body>
+</html>
